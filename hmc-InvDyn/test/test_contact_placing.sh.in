@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export ROBOT=HRP2KAI
+export NS_OPT='-ORBInitRef NameService=corbaloc:iiop:localhost:2809/NameService'
+export MODEL_URL=file://@OPENHRP_DIR@/share/OpenHRP-3.1/robot/HRP2KAI/model/HRP2KAImain.wrl
+
+echo ./test_contact_placing $NS_OPT -url $MODEL_URL $*
+./test_contact_placing $NS_OPT -url $MODEL_URL $*
