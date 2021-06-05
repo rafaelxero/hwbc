@@ -1,0 +1,18 @@
+HMCPlugins:
+ - name: multi-contact-state-manager-mcms
+   plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager.@SO_SFX@
+   subPlugins:
+     - name: mcs-sequence-mcms
+       plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager/MultiContactStateSequenceLoader.@SO_SFX@
+     - name: mcs-sync-mcms
+       plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager/MultiContactStateSyncLoader.@SO_SFX@
+     - name: mcs-root-motion-mcms
+       plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager/MultiContactStateRootInterpolationLoader.@SO_SFX@
+     - name: mcs-endeffector-motion-mcms
+       plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager/MultiContactStateSwingInterpolationLoader.@SO_SFX@
+     - name: mcs-comxy-pz-mcms
+       plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager/MCMS/PrimitiveComxyPzLoader.@SO_SFX@
+     - name: mcs-endeffector-pose-mcms
+       plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager/MCMS/PrimitiveEndEffectorPoseLoader.@SO_SFX@
+     #- name: mcs-contact-manager-mcms
+     #  plugin: @CMAKE_INSTALL_PREFIX@/lib/hmc2/MotionGenerator/MultiContactStateManager/MCMS/PrimitiveContactManagerLoader.@SO_SFX@
